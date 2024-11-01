@@ -1,0 +1,97 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<style>
+    /* General styles */
+    body {
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('https://t3.ftcdn.net/jpg/07/23/76/90/360_F_723769008_WMh95doDam1ZniJHc1WXWGUMdtKLK7Ng.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0; /* Remove default margin */
+        padding: 0;
+        min-height: 100vh; /* Full viewport height */
+    }
+
+    /* Container styles */
+    .container {
+        max-width: 800px;
+        padding: 30px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        border-radius: 8px; /* Rounded corners */
+        margin: 20px;
+    }
+
+    /* Heading and paragraph styles */
+    h1 {
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+            max-width: 90%; /* Make the container take more space on small screens */
+        }
+        
+        h1 {
+            font-size: 2rem; /* Adjust heading size */
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.9rem; /* Adjust paragraph size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 15px;
+            max-width: 95%;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Farm Ai</h2>
+        <h1>Find Top farming prodecures. Get Expert Insights..<br>Be more productive.</h1>
+        <p>Effortless to use. Simple to get started. <br>Let farm AI assist with production, providing more produce<br>
+      
+    </div>
+    
+</body>
+</html>
+{% endblock %}

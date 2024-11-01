@@ -1,0 +1,162 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<style>
+    body{
+        margin: 0;
+        min-height: 100vh;
+    }
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+    
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 500px) {
+    h2 {
+        font-size: 1.5em; /* Adjust the font size if needed */
+    }
+    .responsive {
+        width: 100%;
+    }
+}
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+<body>
+    
+    <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://cdn.britannica.com/36/167236-050-BF90337E/Ears-corn.jpg">
+            <img src="https://cdn.britannica.com/36/167236-050-BF90337E/Ears-corn.jpg" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc"><h5>Procedure to plant maize</h5>
+            <p>Follow these steps to successfully plant and cultivate maize. This guide covers preparation, planting, and post-planting care.</p>
+
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>
+                    <strong>Choose a Suitable Site:</strong> Select a location with good sunlight, well-draining soil, and a pH between 5.5 and 7.0.
+                </li>
+                <li>
+                    <strong>Prepare the Land:</strong> Clear weeds and debris from the field. Loosen the soil by plowing or tilling to allow for proper root development.
+                </li>
+                <li>
+                    <strong>Apply Fertilizer:</strong> Add organic compost or nitrogen-rich fertilizer to the soil. Mix thoroughly to enrich the soil with nutrients.
+                </li>
+                <li>
+                    <strong>Planting the Seeds:</strong> 
+                    <ul>
+                        <li>Plant seeds in rows, spacing them 30–50 cm apart in each row.</li>
+                        <li>Place seeds about 5 cm deep into the soil to ensure proper coverage.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Watering:</strong> Water immediately after planting to moisten the soil. Maintain regular watering, ensuring the soil stays damp but not waterlogged.
+                </li>
+                <li>
+                    <strong>Weed Control:</strong> Remove weeds regularly to prevent competition for nutrients and sunlight. Mulching can also help control weed growth.
+                </li>
+                <li>
+                    <strong>Pest and Disease Control:</strong> Use natural pesticides or insecticides if needed, and monitor plants regularly for signs of disease.
+                </li>
+                <li>
+                    <strong>Harvesting:</strong> Maize is ready for harvest when the husks are dry, and kernels are firm. This usually occurs 90–120 days after planting.
+                </li>
+            </ol>
+            
+        </div>
+
+        </div>
+      </div>
+     
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="https://cdn.britannica.com/36/167236-050-BF90337E/Ears-corn.jpg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREOt8f8tTMbXdMClnJenDaia894zOq7jPoTA&s" alt="Forest" width="600" height="400">
+          </a>
+          <div class="desc"><h5>Procedure to plant maize</h5>
+            <p>Follow these steps to successfully plant and cultivate maize. This guide covers preparation, planting, and post-planting care.</p>
+            <h2>Step-by-Step Guide</h2>
+
+          
+        <ol>
+            <li>
+                <strong>Select a Suitable Site:</strong> Choose a location with well-draining soil and access to full sunlight. Beans grow best in soil with a pH between 6.0 and 7.0.
+            </li>
+            <li>
+                <strong>Prepare the Soil:</strong> Remove any weeds and loosen the soil by tilling or digging. Adding compost or well-rotted manure can improve soil fertility.
+            </li>
+            <li>
+                <strong>Planting the Seeds:</strong> 
+                <ul>
+                    <li>Space rows 45–60 cm apart to give beans enough room to grow.</li>
+                    <li>Plant seeds 2–5 cm deep and space them about 10–15 cm apart in each row.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Watering:</strong> Water the soil immediately after planting to ensure it is evenly moist. Beans need consistent moisture, but avoid waterlogging the soil.
+            </li>
+            <li>
+                <strong>Supporting Growth:</strong> For pole beans, set up stakes, trellises, or a support structure, as they will need something to climb as they grow.
+            </li>
+            <li>
+                <strong>Weed Control:</strong> Regularly remove weeds around the plants to prevent competition for nutrients and water. Be cautious not to disturb the bean plants' shallow roots.
+            </li>
+            <li>
+                <strong>Pest and Disease Management:</strong> Monitor for pests such as aphids and beetles. Consider using natural pest control methods if needed.
+            </li>
+            <li>
+                <strong>Harvesting:</strong> Beans are typically ready to harvest within 50–70 days. Pick them once they reach their full size but are still tender.
+            </li>
+        </ol>
+            
+        </div>
+
+        </div>
+      </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+{% endblock %}
