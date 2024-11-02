@@ -1,15 +1,33 @@
 {% extends 'navbar.html' %}
 
 {% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-messages-container">
+            {% for message in messages %}
+                <div class="flash-message">
+                    
+                    <span class="flash-text">{{ message }}</span>
+                    <span class="flash-messages-container"></span>
+                    <button class="flash-close" onclick="this.parentElement.style.display='none';">&times;</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+
+
 <style>
     /* General styles */
     body {
-        color: #fff;
+        color: white;
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-image: url('https://t3.ftcdn.net/jpg/07/23/76/90/360_F_723769008_WMh95doDam1ZniJHc1WXWGUMdtKLK7Ng.jpg');
+        background-image: url('https://i.pinimg.com/564x/57/a7/65/57a765dc0fb5c92e0d862ad166a73fab.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -18,12 +36,49 @@
         min-height: 100vh; /* Full viewport height */
     }
 
+    .flash-message {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #155724;
+    padding: 3px; /* Reduced padding */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.2; /* Adjust line height to control text spacing */
+}
+
+
+
+.flash-icon {
+    font-size: 1.2em;
+    color: #28a745; /* Green color for tick */
+    margin-right: 10px;
+}
+
+.flash-text {
+    flex: 1;
+    font-size: 1em;
+    max-width: 80%;
+}
+
+.flash-close {
+    background: none;
+    border: none;
+    font-size: 1em; /* Smaller close button */
+    color: #155724;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
     /* Container styles */
     .container {
         max-width: 800px;
         padding: 30px;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+       
         border-radius: 8px; /* Rounded corners */
         margin: 20px;
     }
@@ -66,7 +121,7 @@
 
     @media (max-width: 480px) {
         .container {
-            padding: 15px;
+            padding: 25px;
             max-width: 95%;
         }
 

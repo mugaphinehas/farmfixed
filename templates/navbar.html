@@ -3,67 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+    <title>farmfixed</title>
 
     <link rel="icon" type="image/x-icon" href="https://www.svgrepo.com/show/530298/leaf.svg">
     <style>
+        /* Style the navigation bar */
+        .navbar {
+            width: 100%;
+            background-color: black;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            font-size: smaller;
+        }
 
-  
-    /* Style the navigation bar */
-.navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-  font-family: Arial, sans-serif;
+        /* Navbar links */
+        .navbar a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
 
-  
-  
-}
+        /* Navbar links on mouse-over */
+        .navbar a:hover {
+            background-color: #000;
+        }
 
-/* Navbar links */
-.navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
+        /* Current/active navbar link */
+        .active {
+            background-color: green;
+        }
 
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #000;
-}
+        /* Toggle button for mobile view */
+        .navbar .toggle {
+            display: none;
+            float: right;
+            padding: 12px;
+            font-size: 17px;
+            color: white;
+            cursor: pointer;
+        }
 
-/* Current/active navbar link */
-.active {
-  background-color: #04AA6D;
-}
+        /* Responsive styles */
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                display: none; /* Hide links by default */
+                float: none;
+                text-align: left;
+            }
 
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-</style>
+            .navbar a.active {
+                display: block; /* Keep the active link visible */
+            }
 
+            .navbar .toggle {
+                display: block; /* Show toggle button */
+            }
 
-
+            .navbar.show a {
+                display: block; /* Show links when navbar is expanded */
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Load an icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="navbar">
-  <a class="active" href="{{url_for('Home')}}"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="{{url_for('procedures')}}"><i class="fa fa-fw fa-search"></i> Procedures</a>
-  
-</div>
+    <div class="navbar" id="navbar">
+        <span class="toggle" onclick="toggleNavbar()">&#9776;</span> <!-- Hamburger icon -->
+        <a class="active" href="{{url_for('Home')}}"><i class="fa fa-pagelines" aria-hidden="true"></i>  Home</a>
+        <a href="{{url_for('procedures')}}"><i class="fa fa-envira" aria-hidden="true"></i>  Procedures</a>
+        <a href="{{url_for('add_members')}}"><i class="fa fa-address-book-o" aria-hidden="true"></i>   Join</a>
+    </div>
 
-    
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("show");
+        }
+    </script>
+
 </body>
 {% block content %}
 {% endblock %}

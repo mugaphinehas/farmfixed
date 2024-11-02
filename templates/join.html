@@ -1,0 +1,106 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+
+  <style>
+       /* Basic reset and responsive container styling */
+       * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      
+    }
+ 
+
+    body {
+        
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 0 ;
+        
+    
+
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background-color: #f2f2f2;
+     
+     padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style input, select, and textarea elements */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 8px 0;
+    }
+
+    /* Submit button styling */
+    input[type=submit] {
+      width: 100%;
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    /* Label styling */
+    label {
+      font-weight: bold;
+      margin-top: 12px;
+      display: block;
+    }
+
+    /* Media queries for smaller screens */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+      input[type=submit] {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+<body>
+<div class="container">
+  <form action="/add_members" method="POST">
+    <label for="identity">Name</label>
+    <input type="text" id="identity" name="identity" placeholder="Enter your name.." required>
+
+    <label for="member_nidc">ID Number</label>
+    <input type="text" id="member_nidc" name="member_nidc" placeholder="Enter your ID number.." required>
+
+    <label for="member_location">Location</label>
+    <input type="text" id="member_location" name="member_location" placeholder="Enter your location.." required>
+
+    <label for="member_phone">Phone Number</label>
+    <input type="text" id="member_phone" name="member_phone" placeholder="Enter your phone number.." required>
+
+    <label for="ticket_number">Ticket Number</label>
+    <input type="text" id="ticket_number" name="ticket_number" placeholder="Enter ticket number.." required>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+
+
+
+{% endblock %}
