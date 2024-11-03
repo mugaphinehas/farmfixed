@@ -53,12 +53,13 @@ def add_members():
                 """
                 cursor.execute(sql, (identity, member_nidc, member_location, member_phone, time_arrived, ticket_number))
                 connection.commit()  # Commit the transaction
+                flash("you joined our group")
                 
         finally:
             connection.close()  # Ensure the connection is closed
 
         return redirect(url_for('Home'))  # Redirect to the same page or another page after submission
-    flash("you joined our group")
+   
     return render_template("join.html")  # Render the form for GET requests
 
 
