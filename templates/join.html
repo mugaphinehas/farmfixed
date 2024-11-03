@@ -2,6 +2,21 @@
 
 {% block content %}
 
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="flash-messages-container">
+            {% for message in messages %}
+                <div class="flash-message">
+                    
+                    <span class="flash-text">{{ message }}</span>
+                    <span class="flash-messages-container"></span>
+                    <button class="flash-close" onclick="this.parentElement.style.display='none';">&times;</button>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
   <style>
        /* Basic reset and responsive container styling */
        * {
