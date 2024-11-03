@@ -38,6 +38,42 @@
     
 
     }
+       .flash-message {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #155724;
+    padding: 3px; /* Reduced padding */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.2; /* Adjust line height to control text spacing */
+}
+
+
+
+.flash-icon {
+    font-size: 1.2em;
+    color: #28a745; /* Green color for tick */
+    margin-right: 10px;
+}
+
+.flash-text {
+    flex: 1;
+    font-size: 1em;
+    max-width: 80%;
+}
+
+.flash-close {
+    background: none;
+    border: none;
+    font-size: 1em; /* Smaller close button */
+    color: #155724;
+    cursor: pointer;
+    margin-left: 10px;
+}
 
     .container {
       width: 100%;
